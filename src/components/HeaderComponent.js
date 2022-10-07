@@ -40,36 +40,39 @@ export default class Header extends Component {
 
     }
 
-
     render() {
+        const closeBtn = (
+            <button className="close" onClick={this.toggleModal} type="button">
+              &times;
+            </button>
+          );
+
         return(
             <div>
                 <Navbar dark expand="md">
-                    <div className="container">
-                        <NavbarToggler onClick={this.toggleNav} />
-                        <NavbarBrand className="mr-auto" href="/"><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' />Ristornate</NavbarBrand>
-                        <Collapse isOpen={this.state.isNavOpen} navbar>
-                            <Nav navbar>
+                    <NavbarBrand className="mr-auto" href="/"><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
+                    <NavbarToggler onClick={this.toggleNav} />
+                    <Collapse isOpen={this.state.isNavOpen} navbar>
+                        <Nav navbar>
+                        <NavItem>
+                            <NavLink className="nav-link"  to='/home'><span className="fa fa-home fa-lg"></span> Home</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> About Us</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span> Menu</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
+                        </NavItem>
+                        </Nav>
+                        <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/home'><span className="fa fa-home fa-lg"></span> Home</NavLink>
+                                <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
                             </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> About Us</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span> Menu</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
-                            </NavItem>
-                            </Nav>
-                            <Nav className="ml-auto" navbar>
-                                <NavItem>
-                                    <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
-                    </div>
+                        </Nav>
+                    </Collapse>
                 </Navbar>
                 <div className='jumbotron'>
                     <div className="container">
@@ -82,8 +85,7 @@ export default class Header extends Component {
                     </div>
                 </div>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader toggle={this.toggleModal}>Login
-                    </ModalHeader>
+                    <ModalHeader toggle={this.toggleModal} close={closeBtn}>Login</ModalHeader>
                     <ModalBody>
                         <Form onSubmit={this.handleLogin}>
                             <FormGroup>
