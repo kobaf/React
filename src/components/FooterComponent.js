@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import 'bootstrap-social/bootstrap-social.css';
+
 
 function Footer(props) {
     return(
