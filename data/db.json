@@ -202,7 +202,6 @@
       "author": "25 Cent",
       "date": "2011-12-02T17:57:28.556094Z"
     }
-
   ],
   "promotions": [
     {
@@ -264,6 +263,38 @@
       "message": "afadsfds",
       "date": "2017-12-04T09:41:49.890Z",
       "id": 1
+    },
+    {
+      "firstname": "Andre",
+      "lastname": "Kobelev",
+      "telnum": "322223332223",
+      "email": "an@email.com",
+      "agree": true,
+      "contactType": "Tel.",
+      "message": "12112121",
+      "id": 2
+    },
+    {
+      "firstname": "John",
+      "lastname": "Lennon",
+      "telnum": "346264286382",
+      "email": "lennon@john.com",
+      "agree": false,
+      "contactType": "Tel.",
+      "message": "Yesterday...",
+      "date": "2022-11-09T14:56:33.384Z",
+      "id": 3
+    },
+    {
+      "firstname": "Andre",
+      "lastname": "Lennon",
+      "telnum": "123",
+      "email": "rwrrw@sfsf.df",
+      "agree": false,
+      "contactType": "Tel.",
+      "message": "Abrac",
+      "date": "2022-11-09T14:57:59.828Z",
+      "id": 4
     }
   ]
 }

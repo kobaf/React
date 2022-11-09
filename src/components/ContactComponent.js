@@ -19,10 +19,8 @@ export default class Contact extends Component {
     }
 
     handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
+        this.props.postFeedback(values);
         this.props.resetFeedbackForm();
-        //dispatch(actions.reset('feedback'));
 
     }
 
