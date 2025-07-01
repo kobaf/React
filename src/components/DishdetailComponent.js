@@ -168,8 +168,8 @@ import { FadeTransform, Fade, Stagger } from 'react-animation-components';
                         <Row className="form-group">
                             <Label htmlFor="author" md={12}>Your Name</Label>
                             <Col md={12}>
-                            <Control.text model=".author" id="author" name="name"
-                                innerRef={(input) => this.author = input} 
+                            <Control.text model=".author" id="author" name="author"
+                                innerRef={(input) => this.author = input}
                                 validators={{
                                     required, minLength: minLength(3), maxLength: maxLength(15)
                                 }}

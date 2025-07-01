@@ -39,6 +39,18 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Local Backend
+
+This application expects a JSON server running on `http://localhost:3001/`. The
+repository contains a `data/db.json` file with sample data. Start the server with:
+
+```bash
+json-server --watch data/db.json -p 3001
+```
+
+Once running, the React application will be able to fetch dishes, leaders and
+other resources from the backend.
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
